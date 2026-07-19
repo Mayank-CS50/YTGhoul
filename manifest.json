@@ -3,7 +3,7 @@
   "name": "YTGhoul",
   "version": "1.4.0",
   "description": "Toggle Normal and Focus mode for YouTube homepage feed.",
-  "permissions": ["storage", "alarms", "tabs"],
+  "permissions": ["storage", "alarms"],
   "host_permissions": ["https://www.youtube.com/*"],
   "background": {
     "service_worker": "background.js"
