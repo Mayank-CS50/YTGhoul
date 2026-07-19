@@ -1,0 +1,74 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  width: 320px;
+  background: #111827;
+  color: #f9fafb;
+}
+
+.popup {
+  padding: 14px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  margin: 8px 0 14px;
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.mode-list {
+  display: grid;
+  gap: 8px;
+}
+
+.mode-option {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  align-items: start;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #374151;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #1f2937;
+}
+
+.mode-option:hover {
+  border-color: #60a5fa;
+}
+
+.mode-option input {
+  margin-top: 2px;
+}
+
+.mode-text {
+  display: grid;
+  gap: 2px;
+}
+
+.mode-text strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mode-text small {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.status {
+  margin: 12px 0 0;
+  color: #93c5fd;
+  font-size: 12px;
+  min-height: 16px;
+}

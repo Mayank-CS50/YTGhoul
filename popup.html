@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YouTube Focus Mode</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+  <main class="popup">
+    <h1>YTGhoul</h1>
+    <p class="subtitle">Switch between Normal and Focus/Study mode.</p>
+
+    <div class="mode-list" role="radiogroup" aria-label="Mode selection">
+      <label class="mode-option" for="mode-normal">
+        <input type="radio" id="mode-normal" name="mode" value="normal" />
+        <span class="mode-text">
+          <strong>Normal mode</strong>
+          <small>Show homepage feed normally</small>
+        </span>
+      </label>
+
+      <label class="mode-option" for="mode-focus">
+        <input type="radio" id="mode-focus" name="mode" value="focus" />
+        <span class="mode-text">
+          <strong>Focus/Study mode</strong>
+          <small>Hide YouTube home recommendations feed</small>
+        </span>
+      </label>
+    </div>
+
+    <p id="status" class="status" aria-live="polite"></p>
+    <p id="timer" class="timer"
+      style="display: none; font-weight: bold; color: #d93025; text-align: center; margin-top: 10px;"></p>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
