@@ -14,7 +14,15 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === "focusAlarm") {
     // Switch back to focus mode after 5 minutes.
-    // Content scripts live-apply this via storage.onChanged — no tab reload needed.
-    chrome.storage.local.set({ ytMode: "focus" });
+    // Other tabs live-apply this via storage.onChanged — only the active
+    // YouTube tab gets refreshed, for a clean reset.
+    chrome.storage.local.set({ ytMode: "focus" }, () => {
+      chrome.tabs.query(
+        { active: true, lastFocusedWindow: true, url: "https://www.youtube.com/*" },
+        (tabs) => {
+          if (tabs[0]) chrome.tabs.reload(tabs[0].id);
+        }
+      );
+    });
   }
 });
