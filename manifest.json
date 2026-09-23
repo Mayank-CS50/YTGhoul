@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "YTGhoul",
   "version": "1.4.0",
-  "description": "Toggle Normal and Focus mode for YouTube homepage feed.",
+  "description": "Distraction-free YouTube extension featuring a Focus Mode feed killer and 5-minute auto-relapse timer.",
   "permissions": ["storage", "alarms"],
   "host_permissions": ["https://www.youtube.com/*"],
   "background": {
